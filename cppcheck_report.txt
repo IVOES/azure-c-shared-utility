@@ -1,0 +1,1325 @@
+adapters/httpapi_compact.c:45:1: error: There is an unknown macro here somewhere. Configuration is required. If MU_DEFINE_ENUM_STRINGS is a macro then please configure it. [unknownMacro]
+MU_DEFINE_ENUM_STRINGS(HTTPAPI_RESULT, HTTPAPI_RESULT_VALUES)
+^
+adapters/httpapi_curl.c:1009:31: style: Condition 'interfaceName!=NULL' is always true [knownConditionTrueFalse]
+            if (interfaceName != NULL && interfaceName[0] != '\0')
+                              ^
+adapters/httpapi_curl.c:798:16: note: Assuming that condition 'value==NULL' is not redundant
+        (value == NULL)
+               ^
+adapters/httpapi_curl.c:1008:41: note: Assignment 'interfaceName=(const char*)value', assigned value is 0
+            const char *interfaceName = (const char*)value;
+                                        ^
+adapters/httpapi_curl.c:1009:31: note: Condition 'interfaceName!=NULL' is always true
+            if (interfaceName != NULL && interfaceName[0] != '\0')
+                              ^
+adapters/httpapi_tirtos.c:201:13: error: Common realloc mistake: 'hname' nulled but not freed upon failure [memleakOnRealloc]
+            hname = (char *)realloc(hname, offset + ret);
+            ^
+adapters/httpapi_winhttp.c:20:1: error: There is an unknown macro here somewhere. Configuration is required. If MU_DEFINE_ENUM_STRINGS is a macro then please configure it. [unknownMacro]
+MU_DEFINE_ENUM_STRINGS(HTTPAPI_RESULT, HTTPAPI_RESULT_VALUES)
+^
+adapters/linux_time.c:27:0: information: Skipping configuration 'CLOCK_MONOTONIC' since the value of 'CLOCK_MONOTONIC' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    time_basis = CLOCK_MONOTONIC;
+^
+adapters/linux_time.c:29:0: information: Skipping configuration 'CLOCK_REALTIME' since the value of 'CLOCK_REALTIME' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    time_basis = CLOCK_REALTIME;
+^
+adapters/platform_win32.c:91:22: style: Variable 'getRegValue' is assigned a value that is never used. [unreadVariable]
+    LONG getRegValue = ERROR_INVALID_HANDLE;
+                     ^
+adapters/platform_win32.c:101:23: style: Variable 'openKey' is assigned a value that is never used. [unreadVariable]
+    else if ((openKey = RegOpenKeyExA(hKey, subKey, options, KEY_READ, &openResult)) != ERROR_SUCCESS)
+                      ^
+adapters/platform_win32.c:114:26: style: Variable 'openKey' is assigned a value that is never used. [unreadVariable]
+            if ((openKey = RegOpenKeyExA(hKey, subKey, options, KEY_READ | KEY_WOW64_64KEY, &openResult)) != ERROR_SUCCESS)
+                         ^
+adapters/socketio_berkeley.c:858:9: warning: Either the condition 'socket_io==NULL' is redundant or there is possible null pointer dereference: socket_io_instance. [nullPointerRedundantCheck]
+    if (socket_io_instance->io_state != IO_STATE_OPENING)
+        ^
+adapters/socketio_berkeley.c:787:19: note: Assuming that condition 'socket_io==NULL' is not redundant
+    if (socket_io == NULL)
+                  ^
+adapters/socketio_berkeley.c:786:46: note: Assignment 'socket_io_instance=(struct SOCKET_IO_INSTANCE_TAG*)socket_io', assigned value is 0
+    SOCKET_IO_INSTANCE* socket_io_instance = (SOCKET_IO_INSTANCE*)socket_io;
+                                             ^
+adapters/socketio_berkeley.c:858:9: note: Null pointer dereference
+    if (socket_io_instance->io_state != IO_STATE_OPENING)
+        ^
+adapters/socketio_berkeley.c:289:9: style: The scope of the variable 'flags' can be reduced. [variableScope]
+    int flags;
+        ^
+adapters/socketio_berkeley.c:391:9: style: The scope of the variable 'err' can be reduced. [variableScope]
+    int err;
+        ^
+adapters/socketio_berkeley.c:430:17: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+            err = so_error;
+                ^
+adapters/socketio_berkeley.c:106:11: style: struct member 'NETWORK_INTERFACE_DESCRIPTION_TAG::name' is never used. [unusedStructMember]
+    char* name;
+          ^
+adapters/socketio_berkeley.c:107:11: style: struct member 'NETWORK_INTERFACE_DESCRIPTION_TAG::mac_address' is never used. [unusedStructMember]
+    char* mac_address;
+          ^
+adapters/socketio_berkeley.c:108:11: style: struct member 'NETWORK_INTERFACE_DESCRIPTION_TAG::ip_address' is never used. [unusedStructMember]
+    char* ip_address;
+          ^
+adapters/socketio_berkeley.c:109:47: style: struct member 'NETWORK_INTERFACE_DESCRIPTION_TAG::next' is never used. [unusedStructMember]
+    struct NETWORK_INTERFACE_DESCRIPTION_TAG* next;
+                                              ^
+adapters/srw_lock.c:207:72: error: There is an unknown macro here somewhere. Configuration is required. If MU_TOSTRING is a macro then please configure it. [unknownMacro]
+                LogStatistics(handle, "periodic logging almost every " MU_TOSTRING(TIME_BETWEEN_STATISTICS_LOG) " seconds");
+                                                                       ^
+adapters/string_utils.c:16:29: error: syntax error [syntaxError]
+IMPLEMENT_MOCKABLE_FUNCTION(, char*, vsprintf_char, const char*, format, va_list, va)
+                            ^
+adapters/tlsio_bearssl.c:542:80: style: Same expression on both sides of '||'. [duplicateExpression]
+                0 == memcmp(work->name, EC_PRIVATE_KEY, EC_PRIVATE_KEY_LENGTH) ||
+                                                                               ^
+adapters/tlsio_bearssl.c:281:23: style: The scope of the variable 'buf' can be reduced. [variableScope]
+ const unsigned char *buf;
+                      ^
+adapters/tlsio_bearssl.c:283:6: style: The scope of the variable 'inobj' can be reduced. [variableScope]
+ int inobj;
+     ^
+adapters/tlsio_bearssl.c:284:6: style: The scope of the variable 'extra_nl' can be reduced. [variableScope]
+ int extra_nl;
+     ^
+adapters/tlsio_bearssl.c:285:12: style: The scope of the variable 'i' can be reduced. [variableScope]
+    size_t i;
+           ^
+adapters/tlsio_bearssl.c:413:9: style: The scope of the variable 'curve' can be reduced. [variableScope]
+    int curve;
+        ^
+adapters/tlsio_bearssl.c:414:14: style: The scope of the variable 'supp' can be reduced. [variableScope]
+    uint32_t supp;
+             ^
+adapters/tlsio_bearssl.c:529:14: style: The scope of the variable 'work' can be reduced. [variableScope]
+ pem_object *work;
+             ^
+adapters/tlsio_bearssl.c:530:12: style: The scope of the variable 'u' can be reduced. [variableScope]
+    size_t u;
+           ^
+adapters/tlsio_bearssl.c:576:9: style: The scope of the variable 'u' can be reduced. [variableScope]
+ size_t u;
+        ^
+adapters/tlsio_bearssl.c:577:9: style: The scope of the variable 'result' can be reduced. [variableScope]
+    int result = 0;
+        ^
+adapters/tlsio_bearssl.c:789:12: style: The scope of the variable 'u' can be reduced. [variableScope]
+    size_t u;
+           ^
+adapters/tlsio_bearssl.c:790:12: style: The scope of the variable 'v' can be reduced. [variableScope]
+    size_t v;
+           ^
+adapters/tlsio_bearssl.c:792:9: style: The scope of the variable 'result' can be reduced. [variableScope]
+    int result;
+        ^
+adapters/tlsio_bearssl.c:943:12: style: The scope of the variable 'i' can be reduced. [variableScope]
+    size_t i;
+           ^
+adapters/tlsio_bearssl.c:1054:18: style: The scope of the variable 'cert_signer_algo' can be reduced. [variableScope]
+    unsigned int cert_signer_algo;
+                 ^
+adapters/tlsio_bearssl.c:1233:20: style: The scope of the variable 'buffer' can be reduced. [variableScope]
+    unsigned char *buffer;
+                   ^
+adapters/tlsio_bearssl.c:1235:19: style: The scope of the variable 'bearResult' can be reduced. [variableScope]
+    unsigned long bearResult;
+                  ^
+adapters/tlsio_bearssl.c:1236:9: style: The scope of the variable 'lasterr' can be reduced. [variableScope]
+    int lasterr;
+        ^
+adapters/tlsio_bearssl.c:1500:12: style: The scope of the variable 'i' can be reduced. [variableScope]
+    size_t i;
+           ^
+adapters/tlsio_mbedtls.c:165:13: style: The scope of the variable 'result' can be reduced. [variableScope]
+        int result = 0;
+            ^
+adapters/tlsio_mbedtls.c:465:17: style: The scope of the variable 'pers' can be reduced. [variableScope]
+    const char* pers = "azure_iot_client";
+                ^
+adapters/tlsio_openssl.c:0:0: information: This file is not analyzed. Cppcheck failed to extract a valid configuration. Use -v for more details. [noValidConfiguration]
+
+^
+adapters/tlsio_schannel.c:613:12: style: The scope of the variable 'consumed_bytes' can be reduced. [variableScope]
+    size_t consumed_bytes;
+           ^
+adapters/tlsio_schannel.c:323:0: information: Skipping configuration 'SCH_USE_STRONG_CRYPTO' since the value of 'SCH_USE_STRONG_CRYPTO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    auth_data.dwFlags = SCH_USE_STRONG_CRYPTO | SCH_CRED_NO_DEFAULT_CREDS;
+^
+adapters/tlsio_wolfssl.c:207:0: information: Skipping configuration 'INVALID_DEVID' since the value of 'INVALID_DEVID' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+                (tls_io_instance->wolfssl_device_id != INVALID_DEVID) &&
+^
+adapters/tlsio_wolfssl.c:558:0: information: Skipping configuration 'INVALID_DEVID' since the value of 'INVALID_DEVID' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        tls_io_instance->wolfssl_device_id = INVALID_DEVID;
+^
+adapters/x509_schannel.c:335:24: style: The scope of the variable 'binaryx509Certificate' can be reduced. [variableScope]
+        unsigned char* binaryx509Certificate;
+                       ^
+adapters/x509_schannel.c:336:24: style: The scope of the variable 'binaryx509privatekey' can be reduced. [variableScope]
+        unsigned char* binaryx509privatekey;
+                       ^
+adapters/x509_schannel.c:337:24: style: The scope of the variable 'x509privatekeyBlob' can be reduced. [variableScope]
+        unsigned char* x509privatekeyBlob;
+                       ^
+archive/cyclonessl/tlsio_cyclonessl.c:0:0: information: This file is not analyzed. Cppcheck failed to extract a valid configuration. Use -v for more details. [noValidConfiguration]
+
+^
+archive/cyclonessl/tlsio_cyclonessl_socket_bsd.c:0:0: information: This file is not analyzed. Cppcheck failed to extract a valid configuration. Use -v for more details. [noValidConfiguration]
+
+^
+pal/ios-osx/tlsio_appleios.h:24:19: error: syntax error [syntaxError]
+MOCKABLE_FUNCTION(, const IO_INTERFACE_DESCRIPTION*, tlsio_appleios_get_interface_description);
+                  ^
+samples/socketio_connect/main.c:94:28: style: Condition '!done' is always true [knownConditionTrueFalse]
+                    while (!done)
+                           ^
+samples/socketio_connect/main.c:93:42: note: Assignment 'done=0', assigned value is 0
+                    unsigned char done = 0;
+                                         ^
+samples/socketio_connect/main.c:94:28: note: Condition '!done' is always true
+                    while (!done)
+                           ^
+samples/tlsio_connect/main.c:92:28: style: Condition '!done' is always true [knownConditionTrueFalse]
+                    while (!done)
+                           ^
+samples/tlsio_connect/main.c:91:42: note: Assignment 'done=0', assigned value is 0
+                    unsigned char done = 0;
+                                         ^
+samples/tlsio_connect/main.c:92:28: note: Condition '!done' is always true
+                    while (!done)
+                           ^
+src/azure_base32.c:89:16: style: The scope of the variable 'block_len' can be reduced. [variableScope]
+        size_t block_len = 0;
+               ^
+src/azure_base32.c:91:23: style: The scope of the variable 'pos1' can be reduced. [variableScope]
+        unsigned char pos1 = 0;
+                      ^
+src/azure_base32.c:92:23: style: The scope of the variable 'pos2' can be reduced. [variableScope]
+        unsigned char pos2 = 0;
+                      ^
+src/azure_base32.c:93:23: style: The scope of the variable 'pos3' can be reduced. [variableScope]
+        unsigned char pos3 = 0;
+                      ^
+src/azure_base32.c:94:23: style: The scope of the variable 'pos4' can be reduced. [variableScope]
+        unsigned char pos4 = 0;
+                      ^
+src/azure_base32.c:95:23: style: The scope of the variable 'pos5' can be reduced. [variableScope]
+        unsigned char pos5 = 0;
+                      ^
+src/azure_base32.c:96:23: style: The scope of the variable 'pos6' can be reduced. [variableScope]
+        unsigned char pos6 = 0;
+                      ^
+src/azure_base32.c:97:23: style: The scope of the variable 'pos7' can be reduced. [variableScope]
+        unsigned char pos7 = 0;
+                      ^
+src/azure_base32.c:98:23: style: The scope of the variable 'pos8' can be reduced. [variableScope]
+        unsigned char pos8 = 0;
+                      ^
+src/azure_base32.c:185:16: style: The scope of the variable 'dest_size' can be reduced. [variableScope]
+        size_t dest_size = 0;
+               ^
+src/azure_base32.c:187:24: style: The scope of the variable 'dest_buff' can be reduced. [variableScope]
+        unsigned char* dest_buff;
+                       ^
+src/azure_base32.c:188:14: style: The scope of the variable 'continue_processing' can be reduced. [variableScope]
+        bool continue_processing = true;
+             ^
+src/azure_base32.c:189:23: style: The scope of the variable 'input' can be reduced. [variableScope]
+        unsigned char input[8];
+                      ^
+src/azure_base32.c:89:26: style: Variable 'block_len' is assigned a value that is never used. [unreadVariable]
+        size_t block_len = 0;
+                         ^
+src/azure_base32.c:91:28: style: Variable 'pos1' is assigned a value that is never used. [unreadVariable]
+        unsigned char pos1 = 0;
+                           ^
+src/azure_base32.c:92:28: style: Variable 'pos2' is assigned a value that is never used. [unreadVariable]
+        unsigned char pos2 = 0;
+                           ^
+src/azure_base32.c:93:28: style: Variable 'pos3' is assigned a value that is never used. [unreadVariable]
+        unsigned char pos3 = 0;
+                           ^
+src/azure_base32.c:94:28: style: Variable 'pos4' is assigned a value that is never used. [unreadVariable]
+        unsigned char pos4 = 0;
+                           ^
+src/azure_base32.c:95:28: style: Variable 'pos5' is assigned a value that is never used. [unreadVariable]
+        unsigned char pos5 = 0;
+                           ^
+src/azure_base32.c:96:28: style: Variable 'pos6' is assigned a value that is never used. [unreadVariable]
+        unsigned char pos6 = 0;
+                           ^
+src/azure_base32.c:97:28: style: Variable 'pos7' is assigned a value that is never used. [unreadVariable]
+        unsigned char pos7 = 0;
+                           ^
+src/azure_base32.c:98:28: style: Variable 'pos8' is assigned a value that is never used. [unreadVariable]
+        unsigned char pos8 = 0;
+                           ^
+src/constbuffer.c:69:29: error: syntax error [syntaxError]
+IMPLEMENT_MOCKABLE_FUNCTION(, CONSTBUFFER_HANDLE, CONSTBUFFER_Create, const unsigned char*, source, size_t, size)
+                            ^
+src/constbuffer_array.c:29:29: error: syntax error [syntaxError]
+IMPLEMENT_MOCKABLE_FUNCTION(, CONSTBUFFER_ARRAY_HANDLE, constbuffer_array_create, const CONSTBUFFER_HANDLE*, buffers, uint32_t, buffer_count)
+                            ^
+src/constbuffer_array_batcher.c:244:38: style: The scope of the variable 'j' can be reduced. [variableScope]
+                            uint32_t j;
+                                     ^
+src/crt_abstractions.c:309:10: style: The scope of the variable 'validStr' can be reduced. [variableScope]
+    bool validStr = true;
+         ^
+src/crt_abstractions.c:312:9: style: The scope of the variable 'digitVal' can be reduced. [variableScope]
+    int digitVal;
+        ^
+src/crt_abstractions.c:580:12: style: The scope of the variable 'val' can be reduced. [variableScope]
+    double val;
+           ^
+src/crt_abstractions.c:706:9: style: The scope of the variable 'copied_result' can be reduced. [variableScope]
+    int copied_result;
+        ^
+src/crt_abstractions.c:751:12: style: The scope of the variable 'pos' can be reduced. [variableScope]
+    size_t pos;
+           ^
+src/crt_abstractions.c:802:12: style: The scope of the variable 'pos' can be reduced. [variableScope]
+    size_t pos;
+           ^
+src/crt_abstractions.c:852:12: style: The scope of the variable 'pos' can be reduced. [variableScope]
+    size_t pos;
+           ^
+src/crt_abstractions.c:480:35: style: Variable 'ullInteger' is assigned a value that is never used. [unreadVariable]
+    unsigned long long ullInteger = 0;
+                                  ^
+src/crt_abstractions.c:482:21: style: Variable 'integerSize' is assigned a value that is never used. [unreadVariable]
+    int integerSize = 0;
+                    ^
+src/dns_resolver_ares.c:40:9: style: The scope of the variable 'status' can be reduced. [variableScope]
+    int status;
+        ^
+src/dns_resolver_ares.c:108:9: style: Unused variable: i [unusedVariable]
+    int i;
+        ^
+src/dns_resolver_sync.c:114:17: warning: %u in format string (no. 1) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+            if (sprintf(portString, "%u", dns->port) < 0)
+                ^
+src/http_proxy_io.c:302:27: style: The scope of the variable 'plain_auth_string_bytes' can be reduced. [variableScope]
+                    char* plain_auth_string_bytes;
+                          ^
+src/http_proxy_io.c:539:10: style: The scope of the variable 'fail' can be reduced. [variableScope]
+    bool fail;
+         ^
+src/http_proxy_io.c:540:17: style: The scope of the variable 'runPrefix' can be reduced. [variableScope]
+    const char* runPrefix;
+                ^
+src/logging_stacktrace.c:35:19: style: union member 'SYMBOL_INFO_EXTENDED_TAG::extendsUnion' is never used. [unusedStructMember]
+    unsigned char extendsUnion[sizeof(SYMBOL_INFO) + TRACE_MAX_SYMBOL_SIZE - 1]; /*this field only exists to extend the size of the union to encompass "CHAR    Name[1];" of the SYMBOL_INFO to be as big as TRACE_MAX_SYMBOL_SIZE - 1 */ /*and the reason why it is not malloc'd is to exactly avoid a malloc that cannot be LogError'd (how does one log errors in a log function?!)*/
+                  ^
+src/memory_data.c:10:29: error: syntax error [syntaxError]
+IMPLEMENT_MOCKABLE_FUNCTION(, void, read_uint8_t, const unsigned char*, source, uint8_t*, destination)
+                            ^
+src/sastoken.c:63:53: style: Redundant condition: If 'EXPR == ' '', the comparison 'EXPR != '&'' is always true. [redundantCondition]
+                    if (sasTokenArray[i - 1] != '&' && sasTokenArray[i - 1] == ' ') // look for either & or space
+                                                    ^
+src/sastoken.c:72:53: style: Redundant condition: If 'EXPR == ' '', the comparison 'EXPR != '&'' is always true. [redundantCondition]
+                    if (sasTokenArray[i - 1] != '&' && sasTokenArray[i - 1] == ' ')
+                                                    ^
+src/sastoken.c:85:53: style: Redundant condition: If 'EXPR == ' '', the comparison 'EXPR != '&'' is always true. [redundantCondition]
+                    if (sasTokenArray[i - 1] != '&' && sasTokenArray[i - 1] == ' ')
+                                                    ^
+src/sastoken.c:94:53: style: Redundant condition: If 'EXPR == ' '', the comparison 'EXPR != '&'' is always true. [redundantCondition]
+                    if (sasTokenArray[i - 1] != '&' && sasTokenArray[i - 1] == ' ')
+                                                    ^
+src/sastoken.c:107:53: style: Redundant condition: If 'EXPR == ' '', the comparison 'EXPR != '&'' is always true. [redundantCondition]
+                    if (sasTokenArray[i - 1] != '&' && sasTokenArray[i - 1] == ' ')
+                                                    ^
+src/sastoken.c:116:53: style: Redundant condition: If 'EXPR == ' '', the comparison 'EXPR != '&'' is always true. [redundantCondition]
+                    if (sasTokenArray[i - 1] != '&' && sasTokenArray[i - 1] == ' ')
+                                                    ^
+src/sastoken.c:209:10: style: The scope of the variable 'tokenExpirationTime' can be reduced. [variableScope]
+    char tokenExpirationTime[32] = { 0 };
+         ^
+src/sha1.c:164:16: style: Variable 'result' is reassigned a value before the old one has been used. [redundantAssignment]
+        result = context->Corrupted;
+               ^
+src/sha1.c:161:24: note: result is assigned
+                result = context->Corrupted = shaBadParam;
+                       ^
+src/sha1.c:164:16: note: result is overwritten
+        result = context->Corrupted;
+               ^
+src/sha224.c:309:62: style: Condition 'length==0' is always false [knownConditionTrueFalse]
+    else if ((context->Computed) || (length >= 8) || (length == 0))
+                                                             ^
+src/sha224.c:301:9: note: Assuming that condition '!length' is not redundant
+    if (!length)
+        ^
+src/sha224.c:309:62: note: Condition 'length==0' is always false
+    else if ((context->Computed) || (length >= 8) || (length == 0))
+                                                             ^
+src/sha224.c:259:16: style: Variable 'result' is reassigned a value before the old one has been used. [redundantAssignment]
+        result = context->Corrupted;
+               ^
+src/sha224.c:256:24: note: result is assigned
+                result = context->Corrupted = shaBadParam;
+                       ^
+src/sha224.c:259:16: note: result is overwritten
+        result = context->Corrupted;
+               ^
+src/sha224.c:485:16: style: The scope of the variable 'temp1' can be reduced. [variableScope]
+    uint32_t   temp1, temp2;            /* Temporary word value */
+               ^
+src/sha224.c:485:23: style: The scope of the variable 'temp2' can be reduced. [variableScope]
+    uint32_t   temp1, temp2;            /* Temporary word value */
+                      ^
+src/sha384-512.c:893:16: style: The scope of the variable 'temp1' can be reduced. [variableScope]
+    uint64_t   temp1, temp2;            /* Temporary word value */
+               ^
+src/sha384-512.c:893:23: style: The scope of the variable 'temp2' can be reduced. [variableScope]
+    uint64_t   temp1, temp2;            /* Temporary word value */
+                      ^
+src/strings.c:130:12: style: The scope of the variable 'maxBufSize' can be reduced. [variableScope]
+    size_t maxBufSize = 0;
+           ^
+src/strings.c:559:12: style: The scope of the variable 'maxBufSize' can be reduced. [variableScope]
+    size_t maxBufSize = 0;
+           ^
+src/strings.c:127:0: information: Skipping configuration 'STRINGS_C_SPRINTF_BUFFER_SIZE' since the value of 'STRINGS_C_SPRINTF_BUFFER_SIZE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    size_t maxBufSize = STRINGS_C_SPRINTF_BUFFER_SIZE;
+^
+src/strings.c:128:0: information: Skipping configuration 'STRINGS_C_SPRINTF_BUFFER_SIZE' since the value of 'STRINGS_C_SPRINTF_BUFFER_SIZE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    char buf[STRINGS_C_SPRINTF_BUFFER_SIZE];
+^
+src/strings.c:556:0: information: Skipping configuration 'STRINGS_C_SPRINTF_BUFFER_SIZE' since the value of 'STRINGS_C_SPRINTF_BUFFER_SIZE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    size_t maxBufSize = STRINGS_C_SPRINTF_BUFFER_SIZE;
+^
+src/strings.c:557:0: information: Skipping configuration 'STRINGS_C_SPRINTF_BUFFER_SIZE' since the value of 'STRINGS_C_SPRINTF_BUFFER_SIZE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    char buf[STRINGS_C_SPRINTF_BUFFER_SIZE];
+^
+src/uuid.c:61:25: warning: %hhx in format string (no. 1) requires 'unsigned char *' but the argument type is 'signed char *'. [invalidScanfArgType_int]
+                    if (sscanf(double_hex_digit, "%02hhx", uuid_bytes + j) != 1)
+                        ^
+src/uws_client.c:634:20: style: The scope of the variable 'close_frame' can be reduced. [variableScope]
+    unsigned char* close_frame;
+                   ^
+src/uws_client.c:636:12: style: The scope of the variable 'close_frame_length' can be reduced. [variableScope]
+    size_t close_frame_length;
+           ^
+src/uws_client.c:974:10: style: The scope of the variable 'fail' can be reduced. [variableScope]
+    bool fail;
+         ^
+src/uws_client.c:975:17: style: The scope of the variable 'runPrefix' can be reduced. [variableScope]
+    const char* runPrefix;
+                ^
+src/uws_client.c:1220:28: style: The scope of the variable 'length' can be reduced. [variableScope]
+                    size_t length;
+                           ^
+src/uws_client.c:1451:48: style: The scope of the variable 'close_frame_bytes' can be reduced. [variableScope]
+                                unsigned char* close_frame_bytes;
+                                               ^
+src/uws_client.c:1452:40: style: The scope of the variable 'close_frame_length' can be reduced. [variableScope]
+                                size_t close_frame_length;
+                                       ^
+src/uws_client.c:1584:48: style: The scope of the variable 'pong_frame' can be reduced. [variableScope]
+                                unsigned char* pong_frame;
+                                               ^
+src/uws_client.c:1585:40: style: The scope of the variable 'pong_frame_length' can be reduced. [variableScope]
+                                size_t pong_frame_length;
+                                       ^
+src/uws_frame_encoder.c:39:16: style: The scope of the variable 'needed_bytes' can be reduced. [variableScope]
+        size_t needed_bytes = 2;
+               ^
+src/uws_frame_encoder.c:40:16: style: The scope of the variable 'header_bytes' can be reduced. [variableScope]
+        size_t header_bytes;
+               ^
+src/vector.c:12:29: error: syntax error [syntaxError]
+IMPLEMENT_MOCKABLE_FUNCTION(, VECTOR_HANDLE, VECTOR_create, size_t, elementSize)
+                            ^
+src/ws_url.c:74:14: style: The scope of the variable 'host_parsed' can be reduced. [variableScope]
+        bool host_parsed = false;
+             ^
+src/ws_url.c:75:14: style: The scope of the variable 'port_parsed' can be reduced. [variableScope]
+        bool port_parsed = false;
+             ^
+src/ws_url.c:76:14: style: The scope of the variable 'path_parsed' can be reduced. [variableScope]
+        bool path_parsed = false;
+             ^
+src/ws_url.c:77:14: style: The scope of the variable 'query_parsed' can be reduced. [variableScope]
+        bool query_parsed = false;
+             ^
+src/xlogging.c:115:10: style: The scope of the variable 'messageBuffer' can be reduced. [variableScope]
+    char messageBuffer[MESSAGE_BUFFER_SIZE];
+         ^
+tests/azure_base32_ut/azure_base32_ut.c:243:15: style: The scope of the variable 'result' can be reduced. [variableScope]
+        char* result;
+              ^
+tests/buffer_ut/buffer_ut.c:329:17: style: Variable 'nResult' is reassigned a value before the old one has been used. [redundantAssignment]
+        nResult = BUFFER_pre_build(g_hBuffer, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:325:17: note: nResult is assigned
+        nResult = BUFFER_pre_build(g_hBuffer, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:329:17: note: nResult is overwritten
+        nResult = BUFFER_pre_build(g_hBuffer, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:618:17: style: Variable 'nResult' is reassigned a value before the old one has been used. [redundantAssignment]
+        nResult = BUFFER_build(g_hBuffer, BUFFER_TEST_VALUE, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:611:17: note: nResult is assigned
+        nResult = BUFFER_build(g_hBuffer, BUFFER_TEST_VALUE, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:618:17: note: nResult is overwritten
+        nResult = BUFFER_build(g_hBuffer, BUFFER_TEST_VALUE, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:642:17: style: Variable 'nResult' is reassigned a value before the old one has been used. [redundantAssignment]
+        nResult = BUFFER_build(g_hBuffer, BUFFER_TEST_VALUE, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:635:17: note: nResult is assigned
+        nResult = BUFFER_build(g_hBuffer, BUFFER_TEST_VALUE, ALLOCATION_SIZE - 1);
+                ^
+tests/buffer_ut/buffer_ut.c:642:17: note: nResult is overwritten
+        nResult = BUFFER_build(g_hBuffer, BUFFER_TEST_VALUE, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:666:17: style: Variable 'nResult' is reassigned a value before the old one has been used. [redundantAssignment]
+        nResult = BUFFER_build(g_hBuffer, BUFFER_TEST_VALUE, ALLOCATION_SIZE - 1);
+                ^
+tests/buffer_ut/buffer_ut.c:659:17: note: nResult is assigned
+        nResult = BUFFER_build(g_hBuffer, BUFFER_TEST_VALUE, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:666:17: note: nResult is overwritten
+        nResult = BUFFER_build(g_hBuffer, BUFFER_TEST_VALUE, ALLOCATION_SIZE - 1);
+                ^
+tests/buffer_ut/buffer_ut.c:691:17: style: Variable 'nResult' is reassigned a value before the old one has been used. [redundantAssignment]
+        nResult = BUFFER_unbuild(g_hBuffer);
+                ^
+tests/buffer_ut/buffer_ut.c:684:17: note: nResult is assigned
+        nResult = BUFFER_build(g_hBuffer, BUFFER_TEST_VALUE, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:691:17: note: nResult is overwritten
+        nResult = BUFFER_unbuild(g_hBuffer);
+                ^
+tests/buffer_ut/buffer_ut.c:722:17: style: Variable 'nResult' is reassigned a value before the old one has been used. [redundantAssignment]
+        nResult = BUFFER_unbuild(g_hBuffer);
+                ^
+tests/buffer_ut/buffer_ut.c:721:17: note: nResult is assigned
+        nResult = BUFFER_build(g_hBuffer, BUFFER_TEST_VALUE, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:722:17: note: nResult is overwritten
+        nResult = BUFFER_unbuild(g_hBuffer);
+                ^
+tests/buffer_ut/buffer_ut.c:726:17: style: Variable 'nResult' is reassigned a value before the old one has been used. [redundantAssignment]
+        nResult = BUFFER_unbuild(g_hBuffer);
+                ^
+tests/buffer_ut/buffer_ut.c:722:17: note: nResult is assigned
+        nResult = BUFFER_unbuild(g_hBuffer);
+                ^
+tests/buffer_ut/buffer_ut.c:726:17: note: nResult is overwritten
+        nResult = BUFFER_unbuild(g_hBuffer);
+                ^
+tests/buffer_ut/buffer_ut.c:751:17: style: Variable 'nResult' is reassigned a value before the old one has been used. [redundantAssignment]
+        nResult = BUFFER_enlarge(g_hBuffer, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:744:17: note: nResult is assigned
+        nResult = BUFFER_build(g_hBuffer, BUFFER_TEST_VALUE, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:751:17: note: nResult is overwritten
+        nResult = BUFFER_enlarge(g_hBuffer, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:802:17: style: Variable 'nResult' is reassigned a value before the old one has been used. [redundantAssignment]
+        nResult = BUFFER_shrink(hBuffer, 0, true);
+                ^
+tests/buffer_ut/buffer_ut.c:798:17: note: nResult is assigned
+        nResult = BUFFER_build(hBuffer, TOTAL_BUFFER, TOTAL_ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:802:17: note: nResult is overwritten
+        nResult = BUFFER_shrink(hBuffer, 0, true);
+                ^
+tests/buffer_ut/buffer_ut.c:825:17: style: Variable 'nResult' is reassigned a value before the old one has been used. [redundantAssignment]
+        nResult = BUFFER_shrink(hBuffer, TOTAL_ALLOCATION_SIZE+1, true);
+                ^
+tests/buffer_ut/buffer_ut.c:821:17: note: nResult is assigned
+        nResult = BUFFER_build(hBuffer, TOTAL_BUFFER, TOTAL_ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:825:17: note: nResult is overwritten
+        nResult = BUFFER_shrink(hBuffer, TOTAL_ALLOCATION_SIZE+1, true);
+                ^
+tests/buffer_ut/buffer_ut.c:850:17: style: Variable 'nResult' is reassigned a value before the old one has been used. [redundantAssignment]
+        nResult = BUFFER_shrink(hBuffer, ALLOCATION_SIZE, true);
+                ^
+tests/buffer_ut/buffer_ut.c:844:17: note: nResult is assigned
+        nResult = BUFFER_build(hBuffer, TOTAL_BUFFER, TOTAL_ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:850:17: note: nResult is overwritten
+        nResult = BUFFER_shrink(hBuffer, ALLOCATION_SIZE, true);
+                ^
+tests/buffer_ut/buffer_ut.c:877:17: style: Variable 'nResult' is reassigned a value before the old one has been used. [redundantAssignment]
+        nResult = BUFFER_shrink(hBuffer, ALLOCATION_SIZE, true);
+                ^
+tests/buffer_ut/buffer_ut.c:870:17: note: nResult is assigned
+        nResult = BUFFER_build(hBuffer, TOTAL_BUFFER, TOTAL_ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:877:17: note: nResult is overwritten
+        nResult = BUFFER_shrink(hBuffer, ALLOCATION_SIZE, true);
+                ^
+tests/buffer_ut/buffer_ut.c:904:17: style: Variable 'nResult' is reassigned a value before the old one has been used. [redundantAssignment]
+        nResult = BUFFER_shrink(hBuffer, TOTAL_ALLOCATION_SIZE, true);
+                ^
+tests/buffer_ut/buffer_ut.c:898:17: note: nResult is assigned
+        nResult = BUFFER_build(hBuffer, TOTAL_BUFFER, TOTAL_ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:904:17: note: nResult is overwritten
+        nResult = BUFFER_shrink(hBuffer, TOTAL_ALLOCATION_SIZE, true);
+                ^
+tests/buffer_ut/buffer_ut.c:933:17: style: Variable 'nResult' is reassigned a value before the old one has been used. [redundantAssignment]
+        nResult = BUFFER_shrink(hBuffer, ALLOCATION_SIZE, false);
+                ^
+tests/buffer_ut/buffer_ut.c:926:17: note: nResult is assigned
+        nResult = BUFFER_build(hBuffer, TEST_TOTAL_BUFFER, TOTAL_ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:933:17: note: nResult is overwritten
+        nResult = BUFFER_shrink(hBuffer, ALLOCATION_SIZE, false);
+                ^
+tests/buffer_ut/buffer_ut.c:958:17: style: Variable 'nResult' is reassigned a value before the old one has been used. [redundantAssignment]
+        nResult = BUFFER_enlarge(g_hBuffer, 0);
+                ^
+tests/buffer_ut/buffer_ut.c:954:17: note: nResult is assigned
+        nResult = BUFFER_build(g_hBuffer, BUFFER_TEST_VALUE, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:958:17: note: nResult is overwritten
+        nResult = BUFFER_enlarge(g_hBuffer, 0);
+                ^
+tests/buffer_ut/buffer_ut.c:982:17: style: Variable 'nResult' is reassigned a value before the old one has been used. [redundantAssignment]
+        nResult = BUFFER_content(g_hBuffer, &content);
+                ^
+tests/buffer_ut/buffer_ut.c:977:17: note: nResult is assigned
+        nResult = BUFFER_build(g_hBuffer, BUFFER_TEST_VALUE, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:982:17: note: nResult is overwritten
+        nResult = BUFFER_content(g_hBuffer, &content);
+                ^
+tests/buffer_ut/buffer_ut.c:1022:17: style: Variable 'nResult' is reassigned a value before the old one has been used. [redundantAssignment]
+        nResult = BUFFER_content(g_hBuffer, NULL);
+                ^
+tests/buffer_ut/buffer_ut.c:1018:17: note: nResult is assigned
+        nResult = BUFFER_build(g_hBuffer, BUFFER_TEST_VALUE, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:1022:17: note: nResult is overwritten
+        nResult = BUFFER_content(g_hBuffer, NULL);
+                ^
+tests/buffer_ut/buffer_ut.c:1046:17: style: Variable 'nResult' is reassigned a value before the old one has been used. [redundantAssignment]
+        nResult = BUFFER_size(g_hBuffer, &size);
+                ^
+tests/buffer_ut/buffer_ut.c:1041:17: note: nResult is assigned
+        nResult = BUFFER_build(g_hBuffer, BUFFER_TEST_VALUE, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:1046:17: note: nResult is overwritten
+        nResult = BUFFER_size(g_hBuffer, &size);
+                ^
+tests/buffer_ut/buffer_ut.c:1083:17: style: Variable 'nResult' is reassigned a value before the old one has been used. [redundantAssignment]
+        nResult = BUFFER_size(g_hBuffer, NULL);
+                ^
+tests/buffer_ut/buffer_ut.c:1079:17: note: nResult is assigned
+        nResult = BUFFER_build(g_hBuffer, BUFFER_TEST_VALUE, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:1083:17: note: nResult is overwritten
+        nResult = BUFFER_size(g_hBuffer, NULL);
+                ^
+tests/buffer_ut/buffer_ut.c:1104:17: style: Variable 'nResult' is reassigned a value before the old one has been used. [redundantAssignment]
+        nResult = BUFFER_build(hAppend, ADDITIONAL_BUFFER, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:1102:17: note: nResult is assigned
+        nResult = BUFFER_build(g_hBuffer, BUFFER_TEST_VALUE, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:1104:17: note: nResult is overwritten
+        nResult = BUFFER_build(hAppend, ADDITIONAL_BUFFER, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:1111:17: style: Variable 'nResult' is reassigned a value before the old one has been used. [redundantAssignment]
+        nResult = BUFFER_append(g_hBuffer, hAppend);
+                ^
+tests/buffer_ut/buffer_ut.c:1104:17: note: nResult is assigned
+        nResult = BUFFER_build(hAppend, ADDITIONAL_BUFFER, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:1111:17: note: nResult is overwritten
+        nResult = BUFFER_append(g_hBuffer, hAppend);
+                ^
+tests/buffer_ut/buffer_ut.c:1134:17: style: Variable 'nResult' is reassigned a value before the old one has been used. [redundantAssignment]
+        nResult = BUFFER_append(NULL, hAppend);
+                ^
+tests/buffer_ut/buffer_ut.c:1130:17: note: nResult is assigned
+        nResult = BUFFER_build(hAppend, ADDITIONAL_BUFFER, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:1134:17: note: nResult is overwritten
+        nResult = BUFFER_append(NULL, hAppend);
+                ^
+tests/buffer_ut/buffer_ut.c:1155:17: style: Variable 'nResult' is reassigned a value before the old one has been used. [redundantAssignment]
+        nResult = BUFFER_append(g_hBuffer, NULL);
+                ^
+tests/buffer_ut/buffer_ut.c:1151:17: note: nResult is assigned
+        nResult = BUFFER_build(g_hBuffer, BUFFER_TEST_VALUE, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:1155:17: note: nResult is overwritten
+        nResult = BUFFER_append(g_hBuffer, NULL);
+                ^
+tests/buffer_ut/buffer_ut.c:1281:17: style: Variable 'nResult' is reassigned a value before the old one has been used. [redundantAssignment]
+        nResult = BUFFER_prepend(g_hBuffer, NULL);
+                ^
+tests/buffer_ut/buffer_ut.c:1277:17: note: nResult is assigned
+        nResult = BUFFER_build(g_hBuffer, BUFFER_TEST_VALUE, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:1281:17: note: nResult is overwritten
+        nResult = BUFFER_prepend(g_hBuffer, NULL);
+                ^
+tests/buffer_ut/buffer_ut.c:1301:17: style: Variable 'nResult' is reassigned a value before the old one has been used. [redundantAssignment]
+        nResult = BUFFER_prepend(NULL, hAppend);
+                ^
+tests/buffer_ut/buffer_ut.c:1297:17: note: nResult is assigned
+        nResult = BUFFER_build(hAppend, ADDITIONAL_BUFFER, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:1301:17: note: nResult is overwritten
+        nResult = BUFFER_prepend(NULL, hAppend);
+                ^
+tests/buffer_ut/buffer_ut.c:1321:17: style: Variable 'nResult' is reassigned a value before the old one has been used. [redundantAssignment]
+        nResult = BUFFER_build(hAppend, BUFFER_TEST_VALUE, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:1319:17: note: nResult is assigned
+        nResult = BUFFER_build(g_hBuffer, ADDITIONAL_BUFFER, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:1321:17: note: nResult is overwritten
+        nResult = BUFFER_build(hAppend, BUFFER_TEST_VALUE, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:1328:17: style: Variable 'nResult' is reassigned a value before the old one has been used. [redundantAssignment]
+        nResult = BUFFER_prepend(g_hBuffer, hAppend);
+                ^
+tests/buffer_ut/buffer_ut.c:1321:17: note: nResult is assigned
+        nResult = BUFFER_build(hAppend, BUFFER_TEST_VALUE, ALLOCATION_SIZE);
+                ^
+tests/buffer_ut/buffer_ut.c:1328:17: note: nResult is overwritten
+        nResult = BUFFER_prepend(g_hBuffer, hAppend);
+                ^
+tests/condition_ut/condition_ut.c:26:23: error: syntax error [syntaxError]
+    MOCKABLE_FUNCTION(, void*, gballoc_malloc, size_t, size);
+                      ^
+tests/constbuffer_ut/constbuffer_ut.c:86:25: error: syntax error [syntaxError]
+MOCK_FUNCTION_WITH_CODE(, void, test_free_func, void*, context)
+                        ^
+tests/constmap_ut/constmap_ut.c:500:14: style: The scope of the variable 'keyExists' can be reduced. [variableScope]
+        bool keyExists;
+             ^
+tests/constmap_ut/constmap_ut.c:608:14: style: The scope of the variable 'valueExists' can be reduced. [variableScope]
+        bool valueExists;
+             ^
+tests/constmap_ut/constmap_ut.c:714:22: style: The scope of the variable 'value' can be reduced. [variableScope]
+        const char * value;
+                     ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:562:51: error: Buffer is accessed out of bounds: srcString [bufferAccessOutOfBounds]
+    result = strncpy_s(dstString, dstSizeInBytes, srcString, maxCount+5);
+                                                  ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:498:34: error: Invalid strcpy_s() argument nr 2. The value is 0 but the valid values are '1:'. [invalidFunctionArg]
+    result = strcpy_s(dstString, dstSizeInBytes, srcString);
+                                 ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:496:22: note: Assignment 'dstSizeInBytes=0', assigned value is 0
+    dstSizeInBytes = 0;
+                     ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:498:34: note: Invalid argument
+    result = strcpy_s(dstString, dstSizeInBytes, srcString);
+                                 ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:851:18: style: Condition 'ull_size==128' is always false [knownConditionTrueFalse]
+    if (ull_size == 128)
+                 ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:842:29: note: Assignment 'ull_size=sizeof(unsigned long long)', assigned value is 8
+    size_t ull_size = sizeof(unsigned long long);
+                            ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:851:18: note: Condition 'ull_size==128' is always false
+    if (ull_size == 128)
+                 ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:272:23: error: Null pointer dereference: dstString [nullPointer]
+    result = strcat_s(dstString, sizeInBytes, srcString);
+                      ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:262:23: note: Assignment 'dstString=NULL', assigned value is 0
+    char* dstString = NULL;
+                      ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:272:23: note: Null pointer dereference
+    result = strcat_s(dstString, sizeInBytes, srcString);
+                      ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:322:50: error: Null pointer dereference: srcString [nullPointer]
+    result = strcat_s(dstString, dstSizeInBytes, srcString);
+                                                 ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:314:23: note: Assignment 'srcString=NULL', assigned value is 0
+    char* srcString = NULL;
+                      ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:322:50: note: Null pointer dereference
+    result = strcat_s(dstString, dstSizeInBytes, srcString);
+                                                 ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:456:23: error: Null pointer dereference: dstString [nullPointer]
+    result = strcpy_s(dstString, dstSizeInBytes, srcString);
+                      ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:446:23: note: Assignment 'dstString=NULL', assigned value is 0
+    char* dstString = NULL;
+                      ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:456:23: note: Null pointer dereference
+    result = strcpy_s(dstString, dstSizeInBytes, srcString);
+                      ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:478:50: error: Null pointer dereference: srcString [nullPointer]
+    result = strcpy_s(dstString, dstSizeInBytes, srcString);
+                                                 ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:470:23: note: Assignment 'srcString=NULL', assigned value is 0
+    char* srcString = NULL;
+                      ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:478:50: note: Null pointer dereference
+    result = strcpy_s(dstString, dstSizeInBytes, srcString);
+                                                 ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:640:24: error: Null pointer dereference: dstString [nullPointer]
+    result = strncpy_s(dstString, dstSizeInBytes, srcString, maxCount);
+                       ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:629:23: note: Assignment 'dstString=NULL', assigned value is 0
+    char* dstString = NULL;
+                      ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:640:24: note: Null pointer dereference
+    result = strncpy_s(dstString, dstSizeInBytes, srcString, maxCount);
+                       ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:663:51: error: Null pointer dereference: srcString [nullPointer]
+    result = strncpy_s(dstString, dstSizeInBytes, srcString, maxCount);
+                                                  ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:654:23: note: Assignment 'srcString=NULL', assigned value is 0
+    char* srcString = NULL;
+                      ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:663:51: note: Null pointer dereference
+    result = strncpy_s(dstString, dstSizeInBytes, srcString, maxCount);
+                                                  ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:272:23: error: Null pointer dereference [nullPointer]
+    result = strcat_s(dstString, sizeInBytes, srcString);
+                      ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:322:50: error: Null pointer dereference [nullPointer]
+    result = strcat_s(dstString, dstSizeInBytes, srcString);
+                                                 ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:456:23: error: Null pointer dereference [nullPointer]
+    result = strcpy_s(dstString, dstSizeInBytes, srcString);
+                      ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:478:50: error: Null pointer dereference [nullPointer]
+    result = strcpy_s(dstString, dstSizeInBytes, srcString);
+                                                 ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:640:24: error: Null pointer dereference [nullPointer]
+    result = strncpy_s(dstString, dstSizeInBytes, srcString, maxCount);
+                       ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:663:51: error: Null pointer dereference [nullPointer]
+    result = strncpy_s(dstString, dstSizeInBytes, srcString, maxCount);
+                                                  ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:340:20: style: Redundant initialization for 'dstSizeInBytes'. The initialized value is overwritten before it is read. [redundantInitialization]
+    dstSizeInBytes = 0;
+                   ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:335:27: note: dstSizeInBytes is initialized
+    size_t dstSizeInBytes = sizeof(dstString);
+                          ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:340:20: note: dstSizeInBytes is overwritten
+    dstSizeInBytes = 0;
+                   ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:365:20: style: Redundant initialization for 'dstSizeInBytes'. The initialized value is overwritten before it is read. [redundantInitialization]
+    dstSizeInBytes = strlen(dstString) + (strlen(srcString) - 3);
+                   ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:359:27: note: dstSizeInBytes is initialized
+    size_t dstSizeInBytes = sizeof(dstString);
+                          ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:365:20: note: dstSizeInBytes is overwritten
+    dstSizeInBytes = strlen(dstString) + (strlen(srcString) - 3);
+                   ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:496:20: style: Redundant initialization for 'dstSizeInBytes'. The initialized value is overwritten before it is read. [redundantInitialization]
+    dstSizeInBytes = 0;
+                   ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:491:27: note: dstSizeInBytes is initialized
+    size_t dstSizeInBytes = sizeof(dstString);
+                          ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:496:20: note: dstSizeInBytes is overwritten
+    dstSizeInBytes = 0;
+                   ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:521:20: style: Redundant initialization for 'dstSizeInBytes'. The initialized value is overwritten before it is read. [redundantInitialization]
+    dstSizeInBytes = sizeof(srcString) - 2;
+                   ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:515:27: note: dstSizeInBytes is initialized
+    size_t dstSizeInBytes = sizeof(dstString);
+                          ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:521:20: note: dstSizeInBytes is overwritten
+    dstSizeInBytes = sizeof(srcString) - 2;
+                   ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:597:14: style: Redundant initialization for 'maxCount'. The initialized value is overwritten before it is read. [redundantInitialization]
+    maxCount = _TRUNCATE;
+             ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:593:21: note: maxCount is initialized
+    size_t maxCount = sizeof(srcString);
+                    ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:597:14: note: maxCount is overwritten
+    maxCount = _TRUNCATE;
+             ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:617:14: style: Redundant initialization for 'maxCount'. The initialized value is overwritten before it is read. [redundantInitialization]
+    maxCount = _TRUNCATE;
+             ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:613:21: note: maxCount is initialized
+    size_t maxCount = sizeof(srcString);
+                    ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:617:14: note: maxCount is overwritten
+    maxCount = _TRUNCATE;
+             ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:683:20: style: Redundant initialization for 'dstSizeInBytes'. The initialized value is overwritten before it is read. [redundantInitialization]
+    dstSizeInBytes = 0;
+                   ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:676:27: note: dstSizeInBytes is initialized
+    size_t dstSizeInBytes = sizeof(dstString);
+                          ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:683:20: note: dstSizeInBytes is overwritten
+    dstSizeInBytes = 0;
+                   ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:2686:26: style: Checking if unsigned expression 'toBeConverted' is less than zero. [unsignedLessThanZero]
+    while (toBeConverted <= (SIZE_MAX / 10))
+                         ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:300:17: style: Local variable 'i' shadows outer variable [shadowVariable]
+    for (size_t i = 0; i < dstSizeInBytes; i++)
+                ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:283:12: note: Shadowed declaration
+    size_t i;
+           ^
+tests/crtabstractions_ut/crt_abstractions_ut.c:300:17: note: Shadow variable
+    for (size_t i = 0; i < dstSizeInBytes; i++)
+                ^
+tests/dns_resolver_ut/dns_resolver_ut.c:60:19: error: syntax error [syntaxError]
+MOCKABLE_FUNCTION(, int, getaddrinfo, const char*, node, const char*, service, const struct addrinfo*, hints, struct addrinfo**, res);
+                  ^
+tests/gballoc_ut/gballoc_ut.c:43:23: error: syntax error [syntaxError]
+    MOCKABLE_FUNCTION(, void*, mock_malloc, size_t, size);
+                      ^
+tests/gballoc_without_init_ut/gballoc_without_init_ut.c:40:23: error: syntax error [syntaxError]
+    MOCKABLE_FUNCTION(, void*, mock_malloc, size_t, size);
+                      ^
+tests/http_proxy_io_ut/http_proxy_io_ut.c:75:1: error: There is an unknown macro here somewhere. Configuration is required. If MOCK_FUNCTION_WITH_CODE is a macro then please configure it. [unknownMacro]
+MOCK_FUNCTION_WITH_CODE(, void, test_on_bytes_received, void*, context, const unsigned char*, buffer, size_t, size)
+^
+tests/optionhandler_ut/optionhandler_ut.c:42:19: error: syntax error [syntaxError]
+MOCKABLE_FUNCTION(, void*, aCloneOption, const char*, name, const void*, value);
+                  ^
+tests/platform_win32_ut/platform_win32_ut.c:52:1: error: There is an unknown macro here somewhere. Configuration is required. If MOCK_FUNCTION_WITH_CODE is a macro then please configure it. [unknownMacro]
+MOCK_FUNCTION_WITH_CODE(WSAAPI, int, WSAStartup, WORD, wVersionRequested, LPWSADATA, lpWSAData)
+^
+tests/refcount_ut/refcount_ut.c:189:20: style: Variable 'clone_of_p' is assigned a value that is never used. [unreadVariable]
+        clone_of_p = Pos_Clone(p);
+                   ^
+tests/refcount_ut/some_refcount_impl.c:30:53: style:inconclusive: Function 'Pos_Create_With_Extra_Size' argument 2 names different: declaration 'extraSize' definition 'extra_size'. [funcArgNamesDifferent]
+POS_HANDLE Pos_Create_With_Extra_Size(int x, size_t extra_size)
+                                                    ^
+tests/refcount_ut/some_refcount_impl.h:18:53: note: Function 'Pos_Create_With_Extra_Size' argument 2 names different: declaration 'extraSize' definition 'extra_size'.
+POS_HANDLE Pos_Create_With_Extra_Size(int x, size_t extraSize);
+                                                    ^
+tests/refcount_ut/some_refcount_impl.c:30:53: note: Function 'Pos_Create_With_Extra_Size' argument 2 names different: declaration 'extraSize' definition 'extra_size'.
+POS_HANDLE Pos_Create_With_Extra_Size(int x, size_t extra_size)
+                                                    ^
+tests/sha_ut/sha_ut.c:35:1: error: There is an unknown macro here somewhere. Configuration is required. If MU_DEFINE_ENUM_STRINGS is a macro then please configure it. [unknownMacro]
+MU_DEFINE_ENUM_STRINGS(UMOCK_C_ERROR_CODE, UMOCK_C_ERROR_CODE_VALUES)
+^
+tests/singlylinkedlist_ut/singlylinkedlist_ut.c:54:25: error: syntax error [syntaxError]
+MOCK_FUNCTION_WITH_CODE(, bool, test_match_function, LIST_ITEM_HANDLE, list_item, const void*, match_context)
+                        ^
+tests/socket_async_ut/socket_async_ut.c:52:23: error: syntax error [syntaxError]
+    MOCKABLE_FUNCTION(, int, socket, int, af, int, type, int, protocol);
+                      ^
+tests/socketio_win32_ut/socketio_win32_ut.c:131:5: error: syntax error: keyword 'if' is not allowed in global scope [syntaxError]
+    if (g_socket_recv_size_value >= 0)
+    ^
+tests/srw_lock_ut/srw_lock_ut.c:39:19: error: syntax error [syntaxError]
+MOCKABLE_FUNCTION(, void, mocked_InitializeSRWLock, PSRWLOCK, SRWLock);
+                  ^
+tests/template_ut/target/target.h:31:19: error: syntax error [syntaxError]
+MOCKABLE_FUNCTION(, TARGET_RESULT, target_create, size_t, size);
+                  ^
+tests/template_ut/target/callee.h:28:19: error: syntax error [syntaxError]
+MOCKABLE_FUNCTION(, CALLEE_HANDLE, callee_open, size_t, parameter);
+                  ^
+tests/tickcounter_freertos_ut/freertos/FreeRTOS.h:18:19: error: syntax error [syntaxError]
+MOCKABLE_FUNCTION(, uint32_t, xTaskGetTickCount);
+                  ^
+tests/timer_win32_ut/timer_ut.c:38:22: error: syntax error [syntaxError]
+   MOCKABLE_FUNCTION(, BOOLEAN, mocked_QueryPerformanceCounter, LARGE_INTEGER*, lpPerformanceCount)
+                     ^
+tests/tlsio_bearssl_ut/tlsio_bearssl_ut.c:70:19: error: syntax error [syntaxError]
+MOCKABLE_FUNCTION(, void, br_ssl_client_init_full, br_ssl_client_context*, sc, br_x509_minimal_context*, xc, const br_x509_trust_anchor*, tas, size_t, ta_count);
+                  ^
+tests/tlsio_cyclonessl_socket_bsd_ut/tlsio_cyclonessl_socket_bsd_ut.c:78:5: error: syntax error: keyword 'if' is not allowed in global scope [syntaxError]
+    if (!g_addrinfo_call_fail)
+    ^
+tests/tlsio_cyclonessl_ut/tlsio_cyclonessl_ut.c:94:1: error: There is an unknown macro here somewhere. Configuration is required. If MOCK_FUNCTION_WITH_CODE is a macro then please configure it. [unknownMacro]
+MOCK_FUNCTION_WITH_CODE(, error_t, tlsSetSocket, TlsContext*, context, TlsSocket, socket)
+^
+tests/tlsio_mbedtls_ut/tlsio_mbedtls_ut.c:103:1: error: There is an unknown macro here somewhere. Configuration is required. If MOCKABLE_FUNCTION is a macro then please configure it. [unknownMacro]
+MOCKABLE_FUNCTION(, void, mbedtls_ssl_conf_authmode, mbedtls_ssl_config*, conf, int, authmode)
+^
+tests/tlsio_options_ut/tlsio_options_ut.c:451:12: style: Variable 'result' is reassigned a value before the old one has been used. [redundantAssignment]
+    result = tlsio_options_set(&options, SU_OPTION_X509_CERT, fake_x509_cert);
+           ^
+tests/tlsio_options_ut/tlsio_options_ut.c:450:12: note: result is assigned
+    result = tlsio_options_set(&options, OPTION_TRUSTED_CERT, fake_trusted_cert);
+           ^
+tests/tlsio_options_ut/tlsio_options_ut.c:451:12: note: result is overwritten
+    result = tlsio_options_set(&options, SU_OPTION_X509_CERT, fake_x509_cert);
+           ^
+tests/tlsio_options_ut/tlsio_options_ut.c:452:12: style: Variable 'result' is reassigned a value before the old one has been used. [redundantAssignment]
+    result = tlsio_options_set(&options, SU_OPTION_X509_PRIVATE_KEY, fake_x509_key);
+           ^
+tests/tlsio_options_ut/tlsio_options_ut.c:451:12: note: result is assigned
+    result = tlsio_options_set(&options, SU_OPTION_X509_CERT, fake_x509_cert);
+           ^
+tests/tlsio_options_ut/tlsio_options_ut.c:452:12: note: result is overwritten
+    result = tlsio_options_set(&options, SU_OPTION_X509_PRIVATE_KEY, fake_x509_key);
+           ^
+tests/tlsio_options_ut/tlsio_options_ut.c:301:157: style: Variable 'k' is assigned a value that is never used. [unreadVariable]
+    p0[k] = &options; p1[k] = OPTION_TRUSTED_CERT; p2[k] = NULL;          fm[k] = "Unexpected tlsio_options_initialize success when option_value is NULL"; k++;
+                                                                                                                                                            ^
+tests/tlsio_options_ut/tlsio_options_ut.c:345:78: style: Variable 'k' is assigned a value that is never used. [unreadVariable]
+    p0[k] = OPTION_X509_ECC_KEY; /*  */ p1[k] = SU_OPTION_X509_PRIVATE_KEY; k++;
+                                                                             ^
+tests/tlsio_options_ut/tlsio_options_ut.c:382:42: style: Variable 'k' is assigned a value that is never used. [unreadVariable]
+    p0[k] = OPTION_X509_ECC_KEY; /*  */ k++;
+                                         ^
+tests/tlsio_options_ut/tlsio_options_ut.c:416:42: style: Variable 'k' is assigned a value that is never used. [unreadVariable]
+    p0[k] = OPTION_X509_ECC_KEY; /*  */ k++;
+                                         ^
+tests/tlsio_options_ut/tlsio_options_ut.c:452:12: style: Variable 'result' is assigned a value that is never used. [unreadVariable]
+    result = tlsio_options_set(&options, SU_OPTION_X509_PRIVATE_KEY, fake_x509_key);
+           ^
+tests/tlsio_options_ut/tlsio_options_ut.c:558:42: style: Variable 'k' is assigned a value that is never used. [unreadVariable]
+    p0[k] = OPTION_X509_ECC_KEY; /*  */ k++;
+                                         ^
+tests/tlsio_options_ut/tlsio_options_ut.c:600:146: style: Variable 'k' is assigned a value that is never used. [unreadVariable]
+    p0[k] = OPTION_TRUSTED_CERT; p1[k] = fake_x509_key; p2[k] = NULL; /*  */ fm[k] = "Unexpected clone_option success when out_status is NULL"; k++;
+                                                                                                                                                 ^
+tests/tlsio_options_ut/tlsio_options_ut.c:631:42: style: Variable 'k' is assigned a value that is never used. [unreadVariable]
+    p0[k] = OPTION_X509_ECC_KEY; /*  */ k++;
+                                         ^
+tests/tlsio_options_ut/tlsio_options_ut.c:824:96: style: Variable 'k' is assigned a value that is never used. [unreadVariable]
+    p0[k] = &options; p1[k] = pfCloneOption_impl; p2[k] = pfDestroyOption_impl; p3[k] = NULL; k++;
+                                                                                               ^
+tests/tlsio_options_ut/tlsio_options_ut.c:861:42: style: Variable 'k' is assigned a value that is never used. [unreadVariable]
+    p0[k] = OPTION_X509_ECC_KEY; /*  */ k++;
+                                         ^
+tests/tlsio_options_ut/tlsio_options_ut.c:905:42: style: Variable 'k' is assigned a value that is never used. [unreadVariable]
+    p0[k] = OPTION_X509_ECC_KEY; /*  */ k++;
+                                         ^
+tests/tlsio_wolfssl_ut/tlsio_wolfssl_ut.c:49:19: error: syntax error [syntaxError]
+MOCKABLE_FUNCTION(, void, on_bytes_recv, void*, context, const unsigned char*, buffer, size_t, size);
+                  ^
+tests/uuid_ut/uuid_ut.c:233:11: style: The scope of the variable 'result' can be reduced. [variableScope]
+    char* result;
+          ^
+tests/uws_client_ut/uws_client_ut.c:345:1: error: There is an unknown macro here somewhere. Configuration is required. If MOCK_FUNCTION_END is a macro then please configure it. [unknownMacro]
+MOCK_FUNCTION_END()
+^
+tests/wsio_ut/wsio_ut.c:204:1: error: There is an unknown macro here somewhere. Configuration is required. If MOCK_FUNCTION_END is a macro then please configure it. [unknownMacro]
+MOCK_FUNCTION_END()
+^
+tests/x509_openssl_ut/x509_openssl_ut.c:67:19: error: syntax error [syntaxError]
+MOCKABLE_FUNCTION(,int, BIO_free, BIO *,a);
+                  ^
+tests/xio_ut/xio_ut.c:43:25: error: syntax error [syntaxError]
+MOCK_FUNCTION_WITH_CODE(, CONCRETE_IO_HANDLE, test_xio_create, void*, xio_create_parameters)
+                        ^
+testtools/micromock/unittests/micromocktest/cmockvalueunittests.cpp:9:1: error: There is an unknown macro here somewhere. Configuration is required. If BEGIN_TEST_SUITE is a macro then please configure it. [unknownMacro]
+BEGIN_TEST_SUITE(CMockValue_tests)
+^
+testtools/micromock/unittests/micromocktest/micromockcallcomparisonunittests.cpp:9:19: error: syntax error [syntaxError]
+    MOCK_METHOD_0(, UINT8, TestFunctionWithNoArgs);
+                  ^
+testtools/micromock/unittests/micromocktest/micromocktest.cpp:97:19: error: syntax error [syntaxError]
+    MOCK_METHOD_0(, void, TestFunction)
+                  ^
+testtools/micromock/unittests/micromocktest/micromockvalidateargumentbufferunittests.cpp:21:19: error: syntax error [syntaxError]
+    MOCK_METHOD_1(, void, Test1ArgFunction, UINT8*, bufferArg);
+                  ^
+testtools/micromock/unittests/micromocktest/nullargsstringificationunittests.cpp:26:26: error: syntax error [syntaxError]
+    MOCK_STATIC_METHOD_1(,void, XAA_wchar_const, const wchar_t*, p)
+                         ^
+testtools/micromock/unittests/micromocktest/timediscretemicromocktest_stim.cpp:118:33: error: syntax error [syntaxError]
+DECLARE_STIM_STATIC_TD_METHOD_0(,void, zero);
+                                ^
+testtools/micromock/unittests/micromocktest/timediscretemicromocktestvoidvoid.cpp:12:29: error: syntax error [syntaxError]
+    MOCK_STATIC_TD_METHOD_0(, void, a)
+                            ^
+testtools/micromock/unittests/micromocktest/timediscretemicromockwithreturnandparameters.cpp:13:29: error: syntax error [syntaxError]
+    MOCK_STATIC_TD_METHOD_2(, int, c, int, a, int, b)
+                            ^
+adapters/condition_pthreads.c:128:0: style: The function 'Condition_Deinit' is never used. [unusedFunction]
+
+^
+adapters/condition_pthreads.c:35:0: style: The function 'Condition_Init' is never used. [unusedFunction]
+
+^
+adapters/condition_pthreads.c:44:0: style: The function 'Condition_Post' is never used. [unusedFunction]
+
+^
+adapters/condition_pthreads.c:67:0: style: The function 'Condition_Wait' is never used. [unusedFunction]
+
+^
+src/xlogging.c:50:0: style: The function 'LogBinary' is never used. [unusedFunction]
+
+^
+testtools/micromock/src/micromocktestmutex.cpp:38:0: style: The function 'MicroMockAcquireGlobalSemaphore' is never used. [unusedFunction]
+
+^
+testtools/micromock/src/micromocktestmutex.cpp:32:0: style: The function 'MicroMockAcquireMutex' is never used. [unusedFunction]
+
+^
+testtools/micromock/src/micromocktestmutex.cpp:16:0: style: The function 'MicroMockCreateGlobalSemaphore' is never used. [unusedFunction]
+
+^
+testtools/micromock/src/micromocktestmutex.cpp:11:0: style: The function 'MicroMockCreateMutex' is never used. [unusedFunction]
+
+^
+testtools/micromock/src/micromocktestmutex.cpp:51:0: style: The function 'MicroMockDestroyGlobalSemaphore' is never used. [unusedFunction]
+
+^
+testtools/micromock/src/micromocktestmutex.cpp:56:0: style: The function 'MicroMockDestroyMutex' is never used. [unusedFunction]
+
+^
+testtools/micromock/src/micromockexception.cpp:16:0: style: The function 'MicroMockExceptionToString' is never used. [unusedFunction]
+
+^
+testtools/micromock/src/micromocktestmutex.cpp:44:0: style: The function 'MicroMockReleaseGlobalSemaphore' is never used. [unusedFunction]
+
+^
+testtools/micromock/src/micromocktestmutex.cpp:61:0: style: The function 'MicroMockReleaseMutex' is never used. [unusedFunction]
+
+^
+pal/lwip/sntp_lwip.c:54:0: style: The function 'SNTP_Deinit' is never used. [unusedFunction]
+
+^
+pal/lwip/sntp_lwip.c:36:0: style: The function 'SNTP_Init' is never used. [unusedFunction]
+
+^
+pal/lwip/sntp_lwip.c:27:0: style: The function 'SNTP_SetServerName' is never used. [unusedFunction]
+
+^
+adapters/threadapi_pthreads.c:39:0: style: The function 'ThreadAPI_Create' is never used. [unusedFunction]
+
+^
+adapters/threadapi_pthreads.c:123:0: style: The function 'ThreadAPI_Exit' is never used. [unusedFunction]
+
+^
+adapters/threadapi_pthreads.c:89:0: style: The function 'ThreadAPI_Join' is never used. [unusedFunction]
+
+^
+src/usha.c:252:0: style: The function 'USHAHashSizeBits' is never used. [unusedFunction]
+
+^
+testtools/micromock/tools/micromockgenerator/micromockgenerator.cpp:407:0: style: The function '_tmain' is never used. [unusedFunction]
+
+^
+adapters/envvariable.c:8:0: style: The function 'environment_get_variable' is never used. [unusedFunction]
+
+^
+src/etwlogger_driver.c:250:0: style: The function 'etwlogger_log' is never used. [unusedFunction]
+
+^
+src/etwlogger_driver.c:204:0: style: The function 'etwlogger_log_with_GetLastError' is never used. [unusedFunction]
+
+^
+src/gb_stdio.c:31:0: style: The function 'gb_fclose' is never used. [unusedFunction]
+
+^
+src/gb_stdio.c:26:0: style: The function 'gb_fopen' is never used. [unusedFunction]
+
+^
+src/gb_stdio.c:36:0: style: The function 'gb_fseek' is never used. [unusedFunction]
+
+^
+src/gb_stdio.c:41:0: style: The function 'gb_ftell' is never used. [unusedFunction]
+
+^
+src/gb_time.c:35:0: style: The function 'gb_strftime' is never used. [unusedFunction]
+
+^
+src/gballoc.c:68:0: style: The function 'gballoc_deinit' is never used. [unusedFunction]
+
+^
+src/gballoc.c:400:0: style: The function 'gballoc_getAllocationCount' is never used. [unusedFunction]
+
+^
+src/gballoc.c:373:0: style: The function 'gballoc_getCurrentMemoryUsed' is never used. [unusedFunction]
+
+^
+src/gballoc.c:346:0: style: The function 'gballoc_getMaximumMemoryUsed' is never used. [unusedFunction]
+
+^
+src/gballoc.c:37:0: style: The function 'gballoc_init' is never used. [unusedFunction]
+
+^
+src/gballoc.c:427:0: style: The function 'gballoc_resetMetrics' is never used. [unusedFunction]
+
+^
+src/gbnetwork.c:62:0: style: The function 'gbnetwork_deinit' is never used. [unusedFunction]
+
+^
+src/gbnetwork.c:192:0: style: The function 'gbnetwork_getBytesRecv' is never used. [unusedFunction]
+
+^
+src/gbnetwork.c:148:0: style: The function 'gbnetwork_getBytesSent' is never used. [unusedFunction]
+
+^
+src/gbnetwork.c:214:0: style: The function 'gbnetwork_getNumRecv' is never used. [unusedFunction]
+
+^
+src/gbnetwork.c:170:0: style: The function 'gbnetwork_getNumSends' is never used. [unusedFunction]
+
+^
+src/gbnetwork.c:35:0: style: The function 'gbnetwork_init' is never used. [unusedFunction]
+
+^
+src/gbnetwork.c:117:0: style: The function 'gbnetwork_recv' is never used. [unusedFunction]
+
+^
+src/gbnetwork.c:71:0: style: The function 'gbnetwork_resetMetrics' is never used. [unusedFunction]
+
+^
+src/gbnetwork.c:94:0: style: The function 'gbnetwork_send' is never used. [unusedFunction]
+
+^
+src/logging_stacktrace.c:51:0: style: The function 'getStackAsString' is never used. [unusedFunction]
+
+^
+adapters/agenttime.c:18:0: style: The function 'get_mktime' is never used. [unusedFunction]
+
+^
+src/hmac.c:181:0: style: The function 'hmacFinalBits' is never used. [unusedFunction]
+
+^
+testtools/micromock/unittests/micromocktest/hypothetic_module.c:55:0: style: The function 'izero' is never used. [unusedFunction]
+
+^
+src/logging_stacktrace.c:27:0: style: The function 'logging_free' is never used. [unusedFunction]
+
+^
+src/logging_stacktrace.c:23:0: style: The function 'logging_malloc' is never used. [unusedFunction]
+
+^
+tests/agenttime_ut/agenttime_ut.c:21:0: style: The function 'my_gmtime64' is never used. [unusedFunction]
+
+^
+tests/agenttime_ut/agenttime_ut.c:27:0: style: The function 'my_localtime64' is never used. [unusedFunction]
+
+^
+tests/agenttime_ut/agenttime_ut.c:33:0: style: The function 'my_mktime64' is never used. [unusedFunction]
+
+^
+tests/agenttime_ut/agenttime_ut.c:15:0: style: The function 'my_time64' is never used. [unusedFunction]
+
+^
+adapters/socketio_berkeley.c:257:0: style: The function 'signal_callback' is never used. [unusedFunction]
+
+^
+src/singlylinkedlist.c:375:0: style: The function 'singlylinkedlist_add_head' is never used. [unusedFunction]
+
+^
+src/singlylinkedlist.c:336:0: style: The function 'singlylinkedlist_foreach' is never used. [unusedFunction]
+
+^
+src/singlylinkedlist.c:187:0: style: The function 'singlylinkedlist_get_next_item' is never used. [unusedFunction]
+
+^
+src/singlylinkedlist.c:270:0: style: The function 'singlylinkedlist_remove_if' is never used. [unusedFunction]
+
+^
+pal/socket_async.c:23:0: style: The function 'socket_async_create' is never used. [unusedFunction]
+
+^
+pal/socket_async.c:333:0: style: The function 'socket_async_destroy' is never used. [unusedFunction]
+
+^
+pal/socket_async.c:160:0: style: The function 'socket_async_is_create_complete' is never used. [unusedFunction]
+
+^
+pal/socket_async.c:276:0: style: The function 'socket_async_receive' is never used. [unusedFunction]
+
+^
+pal/socket_async.c:218:0: style: The function 'socket_async_send' is never used. [unusedFunction]
+
+^
+adapters/tcpsocketconnection_c.cpp:39:0: style: The function 'tcpsocketconnection_close' is never used. [unusedFunction]
+
+^
+adapters/tcpsocketconnection_c.cpp:27:0: style: The function 'tcpsocketconnection_connect' is never used. [unusedFunction]
+
+^
+adapters/tcpsocketconnection_c.cpp:11:0: style: The function 'tcpsocketconnection_create' is never used. [unusedFunction]
+
+^
+adapters/tcpsocketconnection_c.cpp:22:0: style: The function 'tcpsocketconnection_destroy' is never used. [unusedFunction]
+
+^
+adapters/tcpsocketconnection_c.cpp:33:0: style: The function 'tcpsocketconnection_is_connected' is never used. [unusedFunction]
+
+^
+adapters/tcpsocketconnection_c.cpp:57:0: style: The function 'tcpsocketconnection_receive' is never used. [unusedFunction]
+
+^
+adapters/tcpsocketconnection_c.cpp:63:0: style: The function 'tcpsocketconnection_receive_all' is never used. [unusedFunction]
+
+^
+adapters/tcpsocketconnection_c.cpp:45:0: style: The function 'tcpsocketconnection_send' is never used. [unusedFunction]
+
+^
+adapters/tcpsocketconnection_c.cpp:51:0: style: The function 'tcpsocketconnection_send_all' is never used. [unusedFunction]
+
+^
+adapters/tcpsocketconnection_c.cpp:16:0: style: The function 'tcpsocketconnection_set_blocking' is never used. [unusedFunction]
+
+^
+testtools/micromock/unittests/micromocktest/hypothetic_module.c:123:0: style: The function 'theTask' is never used. [unusedFunction]
+
+^
+adapters/timer.c:16:0: style: The function 'timer_create' is never used. [unusedFunction]
+
+^
+adapters/timer.c:69:0: style: The function 'timer_destroy' is never used. [unusedFunction]
+
+^
+adapters/timer.c:63:0: style: The function 'timer_get_elapsed_ms' is never used. [unusedFunction]
+
+^
+adapters/timer.c:34:0: style: The function 'timer_start' is never used. [unusedFunction]
+
+^
+adapters/tlsio_template.c:222:0: style: The function 'tlsio_template_get_interface_description' is never used. [unusedFunction]
+
+^
+tests/httpapiexsas_ut/httpapiexsas_ut.c:177:0: style: The function 'umocktypes_are_equal_time_t' is never used. [unusedFunction]
+
+^
+tests/httpapiexsas_ut/httpapiexsas_ut.c:149:0: style: The function 'umocktypes_copy_time_t' is never used. [unusedFunction]
+
+^
+tests/httpapiexsas_ut/httpapiexsas_ut.c:155:0: style: The function 'umocktypes_free_time_t' is never used. [unusedFunction]
+
+^
+tests/httpapiexsas_ut/httpapiexsas_ut.c:160:0: style: The function 'umocktypes_stringify_time_t' is never used. [unusedFunction]
+
+^
+src/uws_client.c:1830:0: style: The function 'uws_client_close_handshake_async' is never used. [unusedFunction]
+
+^
+src/uws_client.c:110:0: style: The function 'uws_client_create' is never used. [unusedFunction]
+
+^
+src/uws_client.c:2239:0: style: The function 'uws_client_set_request_header' is never used. [unusedFunction]
+
+^
+src/wsio.c:827:0: style: The function 'wsio_get_interface_description' is never used. [unusedFunction]
+
+^
+src/xlogging.c:113:0: style: The function 'xlogging_LogErrorWinHTTPWithGetLastErrorAsStringFormatter' is never used. [unusedFunction]
+
+^
+src/xlogging.c:21:0: style: The function 'xlogging_get_log_function' is never used. [unusedFunction]
+
+^
+src/xlogging.c:35:0: style: The function 'xlogging_get_log_function_GetLastError' is never used. [unusedFunction]
+
+^
+src/xlogging.c:16:0: style: The function 'xlogging_set_log_function' is never used. [unusedFunction]
+
+^
+src/xlogging.c:30:0: style: The function 'xlogging_set_log_function_GetLastError' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
